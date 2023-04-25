@@ -1,0 +1,38 @@
+{
+  "name": "dodo-chrome-extension",
+  "version": "1.0.0",
+  "source": "src/index.html",
+  "description": "dodo-chrome-extension",
+  "dependencies": {
+    "clsx": "^1.2.1",
+    "dayjs": "^1.11.7",
+    "easymde": "^2.18.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-simplemde-editor": "^5.2.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-less": "2.8.3",
+    "@types/react": "^18.0.38",
+    "@types/react-dom": "^18.0.11",
+    "chrome-types": "^0.1.186",
+    "parcel": "^2.8.3",
+    "process": "^0.11.10"
+  },
+  "scripts": {
+    "start": "parcel",
+    "build": "rm -rf dist/; parcel build --no-content-hash;sh deploy.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DearDawn/dodo-chrome-extension.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DearDawn/dodo-chrome-extension/issues"
+  },
+  "homepage": "https://github.com/DearDawn/dodo-chrome-extension#readme"
+}

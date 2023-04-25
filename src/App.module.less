@@ -1,0 +1,87 @@
+/* @type */
+
+.mask {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000000;
+  pointer-events: none;
+  transition: all 200ms;
+
+  &.visible {
+    // pointer-events: all;
+    // background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+.drawer {
+  min-width: 500px;
+  width: 30vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10000001;
+  transition: all 200ms ease-in-out;
+  transform: translateX(100%);
+  overflow: auto;
+  background-color: #fff;
+
+  &.visible {
+    transform: translateX(0%);
+    box-shadow: 0px 0 10px 0 rgba(0, 0, 0, 0.2);
+
+    .toggle {
+    }
+  }
+}
+
+.toggle {
+  width: 20px;
+  height: 100px;
+  border-radius: 5px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  box-shadow: 0px 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cardWrap {
+  margin: 10px;
+  position: relative;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.card {
+  font-size: 16px;
+  min-height: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0px 0 10px 0 rgba(0, 0, 0, 0.2);
+  overflow: auto;
+  position: relative;
+
+  img {
+    max-width: 400px;
+    max-height: 200px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    font-size: 0;
+    margin: 4px;
+  }
+}
+
+.date {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+}
