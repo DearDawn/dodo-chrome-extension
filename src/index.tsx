@@ -18,3 +18,5 @@ root.render(
     <App />
   </StrictMode>
 );
+
+console.log('[dodo] ', 'version', 0.1);

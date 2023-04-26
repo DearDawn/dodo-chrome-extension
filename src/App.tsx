@@ -122,26 +122,28 @@ export const App = () => {
     <>
       <div className={clsx(styles.mask, visible && styles.visible)} />
       <div className={clsx(styles.drawer, visible && styles.visible)}>
-        <div className={styles.toggle} onClick={toggleVisible}></div>
-        {cardList.concat(EmptyItem).map((it, index) => (
-          <div className={styles.cardWrap}>
-            <div
-              id={`${CardItemIDPrefix}-${index}`}
-              key={index}
-              data-date={it.date || 0}
-              className={styles.card}
-              contentEditable
-              dangerouslySetInnerHTML={{ __html: it.html || '' }}
-              draggable
-              onDrop={(e) => e.preventDefault()}
-            />
-            {!!it.date && (
-              <div className={styles.date}>
-                {dayjs.unix(it.date).format('MM-DD HH:mm:ss')}
-              </div>
-            )}
-          </div>
-        ))}
+        <div className={styles.toggle} onClick={toggleVisible} />
+        <div className={styles.cardList}>
+          {cardList.concat(EmptyItem).map((it, index) => (
+            <div className={styles.cardWrap}>
+              <div
+                id={`${CardItemIDPrefix}-${index}`}
+                key={index}
+                data-date={it.date || 0}
+                className={styles.card}
+                contentEditable
+                dangerouslySetInnerHTML={{ __html: it.html || '' }}
+                draggable
+                onDrop={(e) => e.preventDefault()}
+              />
+              {!!it.date && (
+                <div className={styles.date}>
+                  {dayjs.unix(it.date).format('MM-DD HH:mm:ss')}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );

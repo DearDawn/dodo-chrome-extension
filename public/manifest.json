@@ -1,10 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "Hello Dodo",
-  "description": "Base Level Extension",
-  "version": "1.0",
+  "name": "Dodo Sticky",
+  "description": "A simple local sticky",
+  "version": "0.0.1",
   "action": {
-    // "default_popup": "index.html",
     "default_icon": "rainbow.png"
   },
   "background": {
