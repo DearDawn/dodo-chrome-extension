@@ -80,6 +80,10 @@ export const App = () => {
         const htmlList = JSON.parse(htmlStr) || [];
         console.log('[dodo] ', 'htmlList', htmlList);
         setCardList(htmlList);
+        const lastID = `${CardItemIDPrefix}-${htmlList.length}`;
+        setTimeout(() => {
+          document.getElementById(lastID)?.focus();
+        }, 150);
         error.current = false;
       } catch (error) {
         console.log('[dodo] ', 'error', error);
@@ -122,7 +126,7 @@ export const App = () => {
     <>
       <div className={clsx(styles.mask, visible && styles.visible)} />
       <div className={clsx(styles.drawer, visible && styles.visible)}>
-        <div className={styles.toggle} onClick={toggleVisible} />
+        {/* <div className={styles.toggle} onClick={toggleVisible} /> */}
         <div className={styles.cardList}>
           {cardList.concat(EmptyItem).map((it, index) => (
             <div className={styles.cardWrap}>
