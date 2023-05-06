@@ -19,4 +19,4 @@ root.render(
   </StrictMode>
 );
 
-console.log('[dodo] ', 'version', 0.1);
+// console.log('[dodo] ', 'version', 0.1);

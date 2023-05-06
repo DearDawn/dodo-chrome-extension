@@ -36,7 +36,7 @@ export const App = () => {
   /** 存当前的数据 */
   const saveList = React.useCallback(() => {
     const htmlList = getDomHtmlList().filter((it) => !!it.html);
-    console.log('[dodo] ', 'htmlList', htmlList);
+    // console.log('[dodo] ', 'htmlList', htmlList);
 
     chrome.storage.local.set({
       [STORAGE_KEY]: JSON.stringify(htmlList),
@@ -78,7 +78,7 @@ export const App = () => {
       try {
         const htmlStr = res[STORAGE_KEY] || '';
         const htmlList = JSON.parse(htmlStr) || [];
-        console.log('[dodo] ', 'htmlList', htmlList);
+        // console.log('[dodo] ', 'htmlList', htmlList);
         setCardList(htmlList);
         const lastID = `${CardItemIDPrefix}-${htmlList.length}`;
         setTimeout(() => {
@@ -86,7 +86,7 @@ export const App = () => {
         }, 150);
         error.current = false;
       } catch (error) {
-        console.log('[dodo] ', 'error', error);
+        // console.log('[dodo] ', 'error', error);
         error.current = true;
       }
     });
@@ -110,7 +110,7 @@ export const App = () => {
         setCardList(htmlList);
         error.current = false;
       } catch (error) {
-        console.log('[dodo] ', 'error', error);
+        // console.log('[dodo] ', 'error', error);
         error.current = true;
       }
     };
