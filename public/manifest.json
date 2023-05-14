@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Dodo Sticky",
   "description": "A simple local sticky",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "action": {
     "default_icon": "rainbow.png"
   },
