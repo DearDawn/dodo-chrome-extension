@@ -122,6 +122,21 @@ export const App = () => {
     };
   }, []);
 
+  React.useEffect(() => {
+    const cb = () => {
+      const isVisible = document.visibilityState === 'visible';
+
+      if (!isVisible) {
+        saveList();
+      }
+    };
+    document.addEventListener('visibilitychange', cb);
+
+    return () => {
+      document.removeEventListener('visibilitychange', cb);
+    };
+  }, []);
+
   return (
     <>
       <div className={clsx(styles.mask, visible && styles.visible)} />
